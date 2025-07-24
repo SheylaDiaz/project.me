@@ -9,5 +9,7 @@ I'm planning to use three main APIs:
 OBIS to gather detailed information about marine life and species data,
 Unsplash to source high-quality ocean animal images, and
 LibreTranslate to offer multilingual support by translating content into different languages.
-Together, these APIs will help bring ocean facts, visuals, and accessibility together in one immersive experience.
+Together, these APIs will help bring ocean facts, visuals, and accessibility together in one immersive experience.\
+
+
 
