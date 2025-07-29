@@ -48,6 +48,8 @@ body{
 }
 a{
   color: silver;
+  display: flex;
+  justify-content: center;
 }
 a:hover{
   color: rgb(247, 247, 43);
@@ -120,20 +122,19 @@ img.inactive {
   padding: 20px;
   max-width: 1200px;
   box-sizing: border-box;
+ 
 }
 h3{
-  color: beige;
+  color: navy;
   display: flex;
   justify-content: center;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
+
 }
- .fish-box , .pollution-box {
-  color: #00b4d8;
-  display: flex;
-  justify-content: center;
- }
+ 
 @media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
+  
 }

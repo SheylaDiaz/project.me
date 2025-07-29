@@ -22,13 +22,9 @@
       loadImagesIntoSection(data.results, '.slideshow-container');
       startSlideshow('.slideshow-container');
     })
-    .catch(err => console.error("Error fetching overfishing images:", err));
+  .catch(err => console.error("Error fetching overfishing images:", err));
 
-      const ctx = document.getElementById('myChart');
-
-
-
-  const IMAGE_API_POLLUTION = `https://api.unsplash.com/search/photos?query=marine+pollution&per_page=10&client_id=${ACCESS_KEY}`;
+const IMAGE_API_POLLUTION = `https://api.unsplash.com/search/photos?query=marine+pollution&per_page=10&client_id=${ACCESS_KEY}`;
 
   fetch(IMAGE_API_POLLUTION)
     .then(response => response.json())
