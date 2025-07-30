@@ -36,8 +36,24 @@
 </section>
 <!-- https://www.youtube.com/watch?v=gQRNYIRZMmA&ab_channel=VincePolston -->
 <!-- https://www.youtube.com/watch?v=FtZwJZB0xb8&t=336s&ab_channel=TheCodeAngle  -->
+<div class="card">
+    <h2>Global Overfishing Chart</h2>
+
+    <div class="controls">
+      <label>From
+        <select id="fromYear"></select>
+      </label>
+      <label>To
+        <select id="toYear"></select>
+      </label>
+      <button id="loadChart">Display Data</button>
+    </div>
+
+    <canvas id="fishingChart"></canvas>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="script.js"></script>
 </body>  
 </html>

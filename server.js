@@ -16,5 +16,16 @@ app.get('/api/pollution-images', async (req, res) => {
   const data = await response.json();
   res.json(data);
 });
+app.get('/api/fishing', async (req, res) => {
+  const { from, to } = req.query;
 
+  const response = await fetch(`https://gateway.globalfishingwatch.org/v2/your-endpoint?start=${from}-01-01&end=${to}-12-31`, {
+    headers: {
+      Authorization: `Bearer ${process.env.GFW_TOKEN}`
+    }
+  });
+
+  const data = await response.json();
+  res.json(data);
+});
 app.listen(5500, () => console.log("Server running at http://localhost:5500"));

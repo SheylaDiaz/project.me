@@ -1,3 +1,5 @@
+
+
   fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Overfishing")
     .then(res => res.json())
     .then(data => {
@@ -80,3 +82,20 @@ const IMAGE_API_POLLUTION = `https://api.unsplash.com/search/photos?query=marine
     .catch(err => console.error("Error fetching Wikipedia fact:", err));
 })();
 
+async function fetchFishingData(fromYear, toYear) {
+  const response = await fetch(`http://localhost:3001/api/fishing?from=${fromYear}&to=${toYear}`);
+  const data = await response.json();
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+  type: 'bar', // or 'line', etc.
+  data: {
+    labels: labels,
+    datasets: [{
+      label: 'My API Data',
+      data: values
+    }]
+  }
+});
+  return data;
+}

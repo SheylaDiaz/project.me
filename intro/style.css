@@ -134,7 +134,10 @@ h3{
   margin-bottom: 2vh;
 
 }
- 
+ .mychart{
+  width: 800px;
+  height: 400px;
+ }
 @media (max-width: 768px) {
   
 }
