@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+<title>"One Ocean, One Future"</title>
+</head>
+
+<body>
+<header>
+<div class="box1">
+    <a href="../public/info.html">Back to the front page.</a>
+<h1 class="main-title">"One Ocean, One Future"</h1>
+<p class="sub-info">looking at overfishing and Marine pollution.</p></div>
+</header>
+<!--https://www.youtube.com/watch?v=Pnlt1NiBt68&ab_channel=CodeBlessYou-->
+<section class="topics">
+<div class="content-wrapper">
+<div class="fish-box">
+<p class="fact-box"></p>
+</div>
+<!--https://www.youtube.com/watch?v=2dsU-j8albM&t=54s&ab_channel=NsquaredCoding-->
+<!-- https://www.youtube.com/watch?v=gQRNYIRZMmA&ab_channel=VincePolston -->
+<!-- https://www.youtube.com/watch?v=FtZwJZB0xb8&t=336s&ab_channel=TheCodeAngle  -->
+
+<div class="content-pair">
+  <div class="slideshow-container"></div>
+
+  <div class="card">
+    <h2>Global Overfishing Chart</h2>
+    <div class="controls">
+      <label>From: <select id="fromYear"></select></label>
+      <label>To: <select id="toYear"></select></label>
+      <button id="loadChart">Display Data</button>
+    </div>
+    <canvas id="fishingChart" width="600" height="300"></canvas>
+  </div>
+</div>
+
+
+
+</section>
+
+<section class="topics2">
+<div class="content-wrapper">
+<div class="pollution-box">
+<p class="fact-box2"></p>
+</div>
+<div class="slideshow-container2"></div>
+<div class="card2">
+    <h2>Pollution Chart</h2>
+    <div class="controls">
+      <label>From: <select id="fromYear"></select></label>
+      <label>To: <select id="toYear"></select></label>
+      <button id="loadChart">Display Data</button>
+    </div>
+    <canvas id="pollutionChart" width="600" height="300"></canvas>
+</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+</body>  
+</html>
