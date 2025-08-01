@@ -1,6 +1,4 @@
-
-
-  fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Overfishing")
+fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Overfishing")
     .then(res => res.json())
     .then(data => {
       const factBox = document.querySelector(".fact-box");
@@ -11,24 +9,18 @@
       `;
     })
     .catch(err => console.error("Error fetching Wikipedia fact:", err));
-;
 
-  (function () {
-  const ACCESS_KEY = "";
-
-  const IMAGE_API_OVERFISHING = `https://api.unsplash.com/search/photos?query=overfishing&per_page=10&client_id=${ACCESS_KEY}`;
-
-  fetch(IMAGE_API_OVERFISHING)
+(function () {
+  fetch('/api/overfishing-images')
     .then(response => response.json())
     .then(data => {
       loadImagesIntoSection(data.results, '.slideshow-container');
       startSlideshow('.slideshow-container');
     })
-  .catch(err => console.error("Error fetching overfishing images:", err));
+    .catch(err => console.error("Error fetching overfishing images:", err));
 
-const IMAGE_API_POLLUTION = `https://api.unsplash.com/search/photos?query=marine+pollution&per_page=10&client_id=${ACCESS_KEY}`;
-
-  fetch(IMAGE_API_POLLUTION)
+  // Fetch pollution images from your backend endpoint
+  fetch('/api/pollution-images')
     .then(response => response.json())
     .then(data => {
       loadImagesIntoSection(data.results, '.slideshow-container2');
@@ -38,6 +30,17 @@ const IMAGE_API_POLLUTION = `https://api.unsplash.com/search/photos?query=marine
 
   function loadImagesIntoSection(images, containerSelector) {
     const container = document.querySelector(containerSelector);
+    if (!container) {
+      console.error(`Container ${containerSelector} not found`);
+      return;
+    }
+    
+    if (!images || !Array.isArray(images)) {
+      console.error('No images array provided');
+      container.innerHTML = '<p>Unable to load images</p>';
+      return;
+    }
+    
     let counter = 1;
 
     images.forEach(img => {
@@ -82,6 +85,11 @@ const IMAGE_API_POLLUTION = `https://api.unsplash.com/search/photos?query=marine
     .catch(err => console.error("Error fetching Wikipedia fact:", err));
 })();
 
+// Initialize chart controls and button when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initializeChartControls();
+  initializeChartButton();
+});
 
 function initializeChartControls() {
   const fromYearSelect = document.getElementById('fromYear');

@@ -4,15 +4,35 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.json());
 app.get('/api/overfishing-images', async (req, res) => {
-  const response = await fetch(`https://api.unsplash.com/search/photos?query=overfishing&per_page=5&client_id=${process.env.UNSPLASH_KEY}`);
-  const data = await response.json();
-  res.json(data);
+  try {
+    const response = await fetch(`https://api.unsplash.com/search/photos?query=overfishing&per_page=5&client_id=${UNSPLASH_ACCESS_KEY}`);
+    
+    if (!response.ok) {
+      throw new Error(`Unsplash API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching overfishing images:', error);
+    res.status(500).json({ error: 'Failed to fetch overfishing images' });
+  }
 });
 
 app.get('/api/pollution-images', async (req, res) => {
-  const response = await fetch(`https://api.unsplash.com/search/photos?query=marine+pollution&per_page=5&client_id=${process.env.UNSPLASH_KEY}`);
-  const data = await response.json();
-  res.json(data);
+  try {
+    const response = await fetch(`https://api.unsplash.com/search/photos?query=marine+pollution&per_page=5&client_id=${UNSPLASH_ACCESS_KEY}`);
+    
+    if (!response.ok) {
+      throw new Error(`Unsplash API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching pollution images:', error);
+    res.status(500).json({ error: 'Failed to fetch pollution images' });
+  }
 });
 
 
@@ -38,4 +58,6 @@ app.get('/api/species-sightings', async (req, res) => {
   }
 });
 
+// Store your API key securely (use environment variables)
+const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY 
 app.listen(5500, () => console.log("🌊 Server running at http://localhost:5500"));

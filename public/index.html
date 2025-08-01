@@ -13,52 +13,29 @@
 <div class="box1">
     <a href="../public/info.html">Back to the front page.</a>
 <h1 class="main-title">"One Ocean, One Future"</h1>
-<p class="sub-info">looking at overfishing and Marine pollution.</p></div>
+<p class="sub-info">looking at overfishing and <a href="./marinelife.html" id="title2">Marine pollution.</p></a></div>
 </header>
 <!--https://www.youtube.com/watch?v=Pnlt1NiBt68&ab_channel=CodeBlessYou-->
 <section class="topics">
-<div class="content-wrapper">
-<div class="fish-box">
-<p class="fact-box"></p>
-</div>
+<div class="slideshow-container"></div>
+<div class="fact-box"></div>
+
 <!--https://www.youtube.com/watch?v=2dsU-j8albM&t=54s&ab_channel=NsquaredCoding-->
 <!-- https://www.youtube.com/watch?v=gQRNYIRZMmA&ab_channel=VincePolston -->
 <!-- https://www.youtube.com/watch?v=FtZwJZB0xb8&t=336s&ab_channel=TheCodeAngle  -->
-
-<div class="content-pair">
-  <div class="slideshow-container"></div>
-
-  <div class="card">
-    <h2>Global Overfishing Chart</h2>
-    <div class="controls">
-      <label>From: <select id="fromYear"></select></label>
-      <label>To: <select id="toYear"></select></label>
-      <button id="loadChart">Display Data</button>
-    </div>
-    <canvas id="fishingChart" width="600" height="300"></canvas>
-  </div>
+<div class="card">
+<h2>Global Overfishing Chart</h2>
+<div class="controls">
+<label>From: 1995<select id="fromYear"></select></label>
+<label>To: 2025<select id="toYear"></select></label>
+<button id="loadChart">Display Data</button>
 </div>
-
-
-
-</section>
-
-<section class="topics2">
-<div class="content-wrapper">
-<div class="pollution-box">
-<p class="fact-box2"></p>
-</div>
-<div class="slideshow-container2"></div>
-<div class="card2">
-    <h2>Pollution Chart</h2>
-    <div class="controls">
-      <label>From: <select id="fromYear"></select></label>
-      <label>To: <select id="toYear"></select></label>
-      <button id="loadChart">Display Data</button>
-    </div>
-    <canvas id="pollutionChart" width="600" height="300"></canvas>
+<canvas id="fishingChart" width="600" height="300"></canvas>
 </div>
 </section>
+
+
+<a href="marinelife.html">Marine pollution</a>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

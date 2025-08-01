@@ -1,29 +1,13 @@
 body{
-  background-color: rgb(191, 240, 252);
-  margin: 0;
-  padding: 0;
+  background-color: rgb(196, 253, 253);
 }
-.container{
+.box1, .fact-box,.fact-box2{
   background-color: #454c53;
   border: 4px solid #00b4d8;
   border-radius: 20px;
   padding: 10px;
   margin: 10px auto;
-  max-width: 90%;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  color:white;
-  font-size: 1rem;
-  font-family: 'Times New Roman', Times, serif;
-  line-height: 2.3vh;
-}
-.box1 {
-  background-color: #454c53;
-  border: 4px solid #00b4d8;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 10px auto;
-  max-width: 90%;
+  max-width: 95%;
   text-align: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
@@ -60,7 +44,7 @@ img {
 }
 
 
-.slideshow-container , .slideshow-container2, .card , .card2{
+.slideshow-container , .slideshow-container2{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,55 +99,20 @@ img.inactive {
   height: 350px;
   object-fit: cover;
   border-radius: 10px;
-
 }
-.fish-box, .pollution-box {
-  border: 6px solid #73fb4e;
-  background-color:cyan;  
- 
-
-
-}
-.content-wrapper {
- display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  margin-top: 10vh;
-  flex-wrap: wrap;
+.card , .card2 {
+  background-color: #454c53;
+  border: 4px solid #00b4d8;
+  border-radius: 20px;
+  padding: 30px;
   margin: 40px auto;
-  padding: 20px;
-  max-width: 150vh;
-  max-height: 180vh;
-  border: 4px solid #0099cc;
- 
-}
-h3{
-  color: navy;
-  display: flex;
-  justify-content: center;
-  text-decoration: underline;
-  font-style: italic;
-  font-size: 2.5vh;
-  margin-bottom: 2vh;
-
-}
-.content-pair {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  flex-wrap: wrap; 
-  margin-top: 30px;
-}
-
- .card , .card2{
-  background-color: #8e9296;
+  max-width: 90%;
   text-align: center;
-
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  color: white;
 }
 
-.card, .card2 h2 {
+.card , .card2 h2 {
   color: cyan;
   margin-bottom: 30px;
   font-size: 2rem;
@@ -229,17 +178,23 @@ h3{
   box-shadow: none;
 }
 
-#fishingChart {
+#fishingChart , #pollutionChart{
   margin: 20px auto;
-  max-width: 80%;
-  height: 400px !important;
+  max-width: 100%;
+  height: 400px;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* Responsive design */
+h3{
+  color: aqua;
+  text-decoration: underline;
+}
+p{
+  color: white;
+}
 @media (max-width: 768px) {
   .topics, .topics2 {
     flex-direction: column;
@@ -294,4 +249,18 @@ h3{
     gap: 20px;
     padding: 10px;
   }
+}
+.container{
+  background-color: #454c53;
+  border: 4px solid #00b4d8;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  color:white;
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 2.3vh;
 }
