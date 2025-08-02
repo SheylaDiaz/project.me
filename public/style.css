@@ -49,8 +49,10 @@ img {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  flex: 1 1 400px;
+  flex: 1 1 700px;
   overflow: hidden;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 
 }
 

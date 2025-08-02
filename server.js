@@ -58,6 +58,6 @@ app.get('/api/species-sightings', async (req, res) => {
   }
 });
 
-// Store your API key securely (use environment variables)
-const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY 
-app.listen(5500, () => console.log("🌊 Server running at http://localhost:5500"));
+const UNSPLASH_ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY || "7py-p15q80GaspUWksKqXQ-eJWqvb7OB_mFo-b9Ol4U";
+
+app.listen(5500, () => console.log("🌊 Server running at http://localhost:5500"))

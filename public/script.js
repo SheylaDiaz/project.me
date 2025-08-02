@@ -11,6 +11,7 @@ fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Overfishing")
     .catch(err => console.error("Error fetching Wikipedia fact:", err));
 
 (function () {
+
   fetch('/api/overfishing-images')
     .then(response => response.json())
     .then(data => {
@@ -19,7 +20,6 @@ fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Overfishing")
     })
     .catch(err => console.error("Error fetching overfishing images:", err));
 
-  // Fetch pollution images from your backend endpoint
   fetch('/api/pollution-images')
     .then(response => response.json())
     .then(data => {
@@ -48,8 +48,8 @@ fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Overfishing")
       imgTag.src = img.urls.regular;
       imgTag.setAttribute('data-id', counter);
       imgTag.className = counter === 1 ? 'active' : 'inactive';
-      imgTag.style.width = '600px';
-      imgTag.style.height = '350px';
+      imgTag.style.width = '900px';
+      imgTag.style.height = '500px';
       container.appendChild(imgTag);
       counter++;
     });
