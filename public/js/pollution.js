@@ -72,7 +72,15 @@ async function fetchPollutionData(from, to) {
           borderWidth: 2
         }]
       },
-      options: { responsive: true }
+      options: { responsive: true,
+         scales: {
+          y: { beginAtZero: true, ticks: { color: '#fff' },
+               grid: { color: 'rgba(235, 235, 243, 0.98)' } },
+          x: { ticks: { color: '#fff' },
+               grid: { color: 'rgba(255, 255, 255, 1)' } }
+        },
+        plugins: { legend: { labels: { color: '#fff' } } }
+       }
     });
   } catch (e) {
     console.error('pollution chart ✖', e);
