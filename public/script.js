@@ -153,6 +153,14 @@ async function fetchOBISData(from ,to) {
 
     const ctx = document.getElementById('fishingChart').getContext('2d');
 
+    // Destroy existing chart if it exists and is a valid Chart instance
+    if (window.fishingChart instanceof Chart) {
+      window.fishingChart.destroy();
+    } else if (window.fishingChart) {
+      // If it exists but isn't a Chart instance, just remove the reference
+      window.fishingChart = null;
+    }
+
      window.fishingChart = new Chart(ctx, {
       type: 'bar',
       data: {
@@ -167,7 +175,7 @@ async function fetchOBISData(from ,to) {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         scales: {
           y: {
             beginAtZero: true,
