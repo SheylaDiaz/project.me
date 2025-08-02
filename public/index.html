@@ -11,7 +11,7 @@
 <body>
 <header>
 <div class="box1">
-    <a href="info.html">Back to the front page.</a>
+    <a id="infot" href="info.html">Back to the front page.</a>
 <h1 class="main-title">"One Ocean, One Future"</h1>
 <p class="sub-info">looking at overfishing and <a href="marinelife.html" id="title2">Marine pollution.</p></a></div>
 </header>
@@ -26,20 +26,17 @@
 <div class="card">
 <h2>Global Overfishing Chart</h2>
 <div class="controls">
-<label>From: 1995<select id="fromYear"></select></label>
-<label>To: 2025<select id="toYear"></select></label>
+<label>From: <select id="fromYear"></select></label>
+<label>To: <select id="toYear"></select></label>
 <button id="loadChart">Display Data</button>
 </div>
 <canvas id="fishingChart" width="600" height="300"></canvas>
 </div>
 </section>
 
-
-<a href="marinelife.html">Marine pollution</a>
+<a id="sub" href="marinelife.html">Marine pollution is next -> </a>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!-- Put `type="module"` so imports work -->
 <script type="module" src="./js/overfishing.js"></script>
 
 </body>

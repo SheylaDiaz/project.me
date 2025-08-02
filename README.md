@@ -13,13 +13,21 @@ Together, these APIs will help bring ocean facts, visuals, and accessibility tog
 
 Idea #2 and final project.
 
-On information
+Capstone Interview Questions
+1. Capstone Project Overview
+ "Can you walk us through your capstone project? What problem were you aiming to solve, and how does your project address that problem?"
+2. Code Functionality and Use
+ "How does the code you wrote support the functionality of your project? Can you point out a specific section of your code that you are particularly proud of or that was challenging to implement?"
+3. Future Plans and Reflection
+ "Reflecting on your experience with Code:You, what’s one key skill or lesson you’ve learned that you’ll carry forward into future projects or your career?" 
 
 
-I wanted to focus my project on the issue of overfishing because I believe it’s one of the environmental challenges we face today. Many marine species are unable to protect themselves from the impact of human activity, and without action, we risk damage to our oceans and the ecosystems that depend we all depend on. 
+My project is base in overfishing and marine pollution i wanted to shine a light in the issue we have being facing for a while now and there being a lot of progress on it but its never to much if it help our planet. i wanted to have a sliceshow to display img since i'm a visual learning so i like pitcures.i integrated a litle information box just to give an explained of what exacty is overfishing and marine pollution. I also add a chart just to display the overfishing and marine pollution over the years to have a visual on how we have progess.   
 
 I came acros this documentarie  <a href="https://www.youtube.com/watch?v=v5J7aP2FYH4&ab_channel=NationalGeographic" target="_blank">David Attenborough: Ocean</a>  looking for information about my original idea but after watching it it gave me this idea and i loved the messege and i felt like it need to be shared. 
 
+
+Next i have a list of the youtube videos i watch to make the sliceshow and chart happend, i also had helped from my mentor to make sure everything is running with no error.
 <!--https://www.youtube.com/watch?v=Pnlt1NiBt68&ab_channel=CodeBlessYou-->
 <!--https://www.youtube.com/watch?v=2dsU-j8albM&t=54s&ab_channel=NsquaredCoding-->
 <!-- https://www.youtube.com/watch?v=gQRNYIRZMmA&ab_channel=VincePolston -->

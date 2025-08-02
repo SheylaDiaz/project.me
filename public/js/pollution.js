@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(e => console.error('Wiki fetch failed:', e));
 
-  /* ——— Unsplash slideshow ——— */
   fetch('/api/pollution-images')
     .then(r => r.json())
     .then(({ results }) => {
@@ -63,7 +62,7 @@ async function fetchPollutionData(from, to) {
     if (window.pollutionChart instanceof Chart) window.pollutionChart.destroy();
 
     window.pollutionChart = new Chart(ctx, {
-      type: 'line',
+      type: 'bubble',
       data: {
         labels,
         datasets: [{

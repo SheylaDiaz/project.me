@@ -45,7 +45,7 @@ function initSpeciesChart() {
     fromSel.appendChild(new Option(y, y));
     toSel.appendChild(new Option(y, y));
   }
-  fromSel.value = 2020;
+  fromSel.value = 2000;
   toSel.value   = 2024;
 
   btn.addEventListener('click', () => fetchOBISData(+fromSel.value, +toSel.value));
